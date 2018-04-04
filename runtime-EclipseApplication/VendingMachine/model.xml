@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="Feature_VM">
+				<or mandatory="true" name="Feature_BEV">
+					<feature mandatory="true" name="Feature_COF"></feature>
+					<feature mandatory="true" name="Feature_TEA"></feature>
+					<feature mandatory="true" name="Feature_CAP"></feature>
+				</or>
+				<feature mandatory="false" name="Feature_TON"></feature>
+				<alt mandatory="true" name="Feature_CUR">
+					<feature mandatory="true" name="Feature_EUR"></feature>
+					<feature mandatory="true" name="Feature_DOL"></feature>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
