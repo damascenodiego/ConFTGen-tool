@@ -54,8 +54,7 @@
    (=> AEM RCK)
 ))
 
-(assert (and CLS CLS))
-(assert (and 
-    (not (and true CLS true CLS ))
-))
+(push)
+(assert (and CLS true CLS))
 (check-sat)
+(pop)

@@ -30,8 +30,7 @@
    (=> S V)
 ))
 
-(assert (and S true))
-(assert (and 
-    (not (and true S true true ))
-))
+(push)
+(assert (and S W S))
 (check-sat)
+(pop)

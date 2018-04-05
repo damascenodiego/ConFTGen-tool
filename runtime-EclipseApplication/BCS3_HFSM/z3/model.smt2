@@ -54,9 +54,7 @@
    (=> AEM RCK)
 ))
 
-(assert (and (and (and true true CLS) CLS) (and (and true true CLS) CLS)))
-(assert (and 
-    (not (and AutPW (and (and true true CLS) CLS) true (and (and true true CLS) CLS) ))
-    (not (and ManPW (and (and true true CLS) CLS) true (and (and true true CLS) CLS) ))
-))
+(push)
+(assert (and CLS true CLS))
 (check-sat)
+(pop)

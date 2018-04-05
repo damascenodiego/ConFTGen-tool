@@ -55,8 +55,7 @@
 ))
 
 
- (assert (and BCS DS PW FP WIN AutPW SEC ))(assert (and CLS CLS))
-(assert (and 
-    (not (and true CLS true CLS ))
-))
+ (assert (and BCS DS PW FP WIN AutPW SEC ))(push)
+(assert (and CLS true CLS))
 (check-sat)
+(pop)
