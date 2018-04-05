@@ -1,9 +1,132 @@
-1@true -- a@true/_1() -> 3@W
-1@true -- b@W/_1() -> 5@true
-1@true -- c@(and W (not S))/_1() -> 1@true
-3@W -- c@(not S)/_0() -> 3@W
-3@W -- a@true/_0() -> 3@W
-3@W -- b@true/_1() -> 5@true
-5@true -- a@true/_1() -> 3@W
-5@true -- c@true/_1() -> 1@true
-5@true -- b@true/_0() -> 5@true
+s0@true -- sugar@true/nok() -> s0@true
+s0@true -- no_sugar@true/nok() -> s0@true
+s0@true -- coffee@(or COF CAP)/nok() -> s0@true
+s0@true -- cap@CAP/nok() -> s0@true
+s0@true -- pour_sugar@true/nok() -> s0@true
+s0@true -- pour_coffee@(or COF CAP)/nok() -> s0@true
+s0@true -- pour_milk@CAP/nok() -> s0@true
+s0@true -- display_done@true/nok() -> s0@true
+s0@true -- ring@TON/nok() -> s0@true
+s0@true -- cup_taken@true/nok() -> s0@true
+s0@true -- dollar@DOL/ok() -> s1@true
+s1@true -- dollar@DOL/nok() -> s1@true
+s1@true -- coffee@(or COF CAP)/nok() -> s1@true
+s1@true -- cap@CAP/nok() -> s1@true
+s1@true -- pour_sugar@true/nok() -> s1@true
+s1@true -- pour_coffee@(or COF CAP)/nok() -> s1@true
+s1@true -- pour_milk@CAP/nok() -> s1@true
+s1@true -- display_done@true/nok() -> s1@true
+s1@true -- ring@TON/nok() -> s1@true
+s1@true -- cup_taken@true/nok() -> s1@true
+s1@true -- sugar@true/ok() -> s2@true
+s1@true -- no_sugar@true/ok() -> s3@true
+s2@true -- dollar@DOL/nok() -> s2@true
+s2@true -- sugar@true/nok() -> s2@true
+s2@true -- no_sugar@true/void() -> s2@true
+s2@true -- pour_sugar@true/nok() -> s2@true
+s2@true -- pour_coffee@(or COF CAP)/nok() -> s2@true
+s2@true -- pour_milk@CAP/nok() -> s2@true
+s2@true -- display_done@true/nok() -> s2@true
+s2@true -- ring@TON/nok() -> s2@true
+s2@true -- cup_taken@true/nok() -> s2@true
+s2@true -- coffee@COF/ok() -> s4@COF
+s2@true -- cap@CAP/ok() -> s6@CAP
+s3@true -- dollar@DOL/nok() -> s3@true
+s3@true -- sugar@true/void() -> s3@true
+s3@true -- no_sugar@true/nok() -> s3@true
+s3@true -- pour_sugar@true/nok() -> s3@true
+s3@true -- pour_coffee@(or COF CAP)/nok() -> s3@true
+s3@true -- pour_milk@CAP/nok() -> s3@true
+s3@true -- display_done@true/nok() -> s3@true
+s3@true -- ring@TON/nok() -> s3@true
+s3@true -- cup_taken@true/nok() -> s3@true
+s3@true -- coffee@COF/ok() -> s9@COF
+s3@true -- cap@CAP/ok() -> s7@CAP
+s4@COF -- dollar@DOL/nok() -> s4@COF
+s4@COF -- sugar@true/nok() -> s4@COF
+s4@COF -- no_sugar@true/nok() -> s4@COF
+s4@COF -- coffee@(or COF CAP)/nok() -> s4@COF
+s4@COF -- cap@CAP/void() -> s4@COF
+s4@COF -- pour_coffee@(or COF CAP)/nok() -> s4@COF
+s4@COF -- pour_milk@CAP/nok() -> s4@COF
+s4@COF -- display_done@true/nok() -> s4@COF
+s4@COF -- ring@TON/nok() -> s4@COF
+s4@COF -- cup_taken@true/nok() -> s4@COF
+s4@COF -- pour_sugar@true/ok() -> s9@COF
+s6@CAP -- dollar@DOL/nok() -> s6@CAP
+s6@CAP -- sugar@true/nok() -> s6@CAP
+s6@CAP -- no_sugar@true/nok() -> s6@CAP
+s6@CAP -- coffee@(or COF CAP)/void() -> s6@CAP
+s6@CAP -- cap@CAP/nok() -> s6@CAP
+s6@CAP -- pour_coffee@(or COF CAP)/nok() -> s6@CAP
+s6@CAP -- pour_milk@CAP/nok() -> s6@CAP
+s6@CAP -- display_done@true/nok() -> s6@CAP
+s6@CAP -- ring@TON/nok() -> s6@CAP
+s6@CAP -- cup_taken@true/nok() -> s6@CAP
+s6@CAP -- pour_sugar@true/ok() -> s7@CAP
+s7@CAP -- dollar@DOL/nok() -> s7@CAP
+s7@CAP -- sugar@true/nok() -> s7@CAP
+s7@CAP -- no_sugar@true/nok() -> s7@CAP
+s7@CAP -- coffee@(or COF CAP)/void() -> s7@CAP
+s7@CAP -- cap@CAP/nok() -> s7@CAP
+s7@CAP -- pour_sugar@true/nok() -> s7@CAP
+s7@CAP -- pour_coffee@(or COF CAP)/nok() -> s7@CAP
+s7@CAP -- display_done@true/nok() -> s7@CAP
+s7@CAP -- ring@TON/nok() -> s7@CAP
+s7@CAP -- cup_taken@true/nok() -> s7@CAP
+s7@CAP -- pour_milk@CAP/ok() -> s10@CAP
+s9@COF -- dollar@DOL/nok() -> s9@COF
+s9@COF -- sugar@true/nok() -> s9@COF
+s9@COF -- no_sugar@true/nok() -> s9@COF
+s9@COF -- coffee@(or COF CAP)/nok() -> s9@COF
+s9@COF -- cap@CAP/void() -> s9@COF
+s9@COF -- pour_sugar@true/nok() -> s9@COF
+s9@COF -- pour_milk@CAP/nok() -> s9@COF
+s9@COF -- display_done@true/nok() -> s9@COF
+s9@COF -- ring@TON/nok() -> s9@COF
+s9@COF -- cup_taken@true/nok() -> s9@COF
+s9@COF -- pour_coffee@(or COF CAP)/ok() -> s11@(or COF (or CAP TEA))
+s10@CAP -- dollar@DOL/nok() -> s10@CAP
+s10@CAP -- sugar@true/nok() -> s10@CAP
+s10@CAP -- no_sugar@true/nok() -> s10@CAP
+s10@CAP -- coffee@(or COF CAP)/nok() -> s10@CAP
+s10@CAP -- cap@CAP/nok() -> s10@CAP
+s10@CAP -- pour_sugar@true/nok() -> s10@CAP
+s10@CAP -- pour_milk@CAP/nok() -> s10@CAP
+s10@CAP -- display_done@true/nok() -> s10@CAP
+s10@CAP -- ring@TON/nok() -> s10@CAP
+s10@CAP -- cup_taken@true/nok() -> s10@CAP
+s10@CAP -- pour_coffee@(or CAP COF)/ok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- dollar@DOL/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- sugar@true/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- no_sugar@true/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- coffee@(or COF CAP)/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- cap@CAP/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- pour_sugar@true/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- pour_coffee@(or COF CAP)/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- pour_milk@CAP/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- ring@TON/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- cup_taken@true/nok() -> s11@(or COF (or CAP TEA))
+s11@(or COF (or CAP TEA)) -- display_done@TON/ok() -> s13@TON
+s13@TON -- dollar@DOL/nok() -> s13@TON
+s13@TON -- sugar@true/nok() -> s13@TON
+s13@TON -- no_sugar@true/nok() -> s13@TON
+s13@TON -- coffee@(or COF CAP)/nok() -> s13@TON
+s13@TON -- cap@CAP/nok() -> s13@TON
+s13@TON -- pour_sugar@true/nok() -> s13@TON
+s13@TON -- pour_coffee@(or COF CAP)/nok() -> s13@TON
+s13@TON -- pour_milk@CAP/nok() -> s13@TON
+s13@TON -- display_done@true/nok() -> s13@TON
+s13@TON -- cup_taken@true/nok() -> s13@TON
+s13@TON -- ring@TON/ok() -> s12@true
+s12@true -- dollar@DOL/nok() -> s12@true
+s12@true -- sugar@true/nok() -> s12@true
+s12@true -- no_sugar@true/nok() -> s12@true
+s12@true -- coffee@(or COF CAP)/nok() -> s12@true
+s12@true -- cap@CAP/nok() -> s12@true
+s12@true -- pour_sugar@true/nok() -> s12@true
+s12@true -- pour_coffee@(or COF CAP)/nok() -> s12@true
+s12@true -- pour_milk@CAP/nok() -> s12@true
+s12@true -- display_done@true/nok() -> s12@true
+s12@true -- ring@TON/nok() -> s12@true
+s12@true -- cup_taken@true/ok() -> s0@true

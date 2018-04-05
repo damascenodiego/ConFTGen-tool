@@ -16,6 +16,13 @@
 			</and>
 		</struct>
 		<constraints>
+			<rule>
+				<imp>
+					<var>Feature_CAP</var>
+					<var>Feature_TON</var>
+				</imp>
+			</rule>
+
 		</constraints>
 		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
 		<comments/>

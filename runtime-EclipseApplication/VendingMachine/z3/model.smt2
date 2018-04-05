@@ -19,8 +19,5 @@
    (not (and EUR DOL))
 ))
 
-(assert (and true TON))
-(assert (and 
-    (not (and true true true TON ))
-))
+(assert (and true (and VM BEV COF CAP TON CUR DOL (not TEA) (not EUR) )))
 (check-sat)
