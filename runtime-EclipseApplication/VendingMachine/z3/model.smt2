@@ -19,7 +19,8 @@
    (not (and EUR DOL))
 ))
 
-(push)
-(assert (and true true true))
+(assert (and true TON))
+(assert (and 
+    (not (and true true true TON ))
+))
 (check-sat)
-(pop)

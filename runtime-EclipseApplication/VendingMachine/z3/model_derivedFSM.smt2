@@ -31,7 +31,7 @@
 ))
 
 
- (assert (and AGM A M L C R B V Y P S (not N) (not W) ))(push)
-(assert (and S true B))
+ (assert (and AGM A M L C R W V Y P (not B) (not N) (not S) ))(push)
+(assert true)
 (check-sat)
 (pop)
