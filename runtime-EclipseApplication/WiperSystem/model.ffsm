@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sgraph="http://www.yakindu.org/sct/sgraph/2.0.0">
-  <sgraph:Statechart xmi:id="_nDK_IL8nEeaAyIZK-0XS2g" specification="interface:&#xA;// inputs&#xA;in event heavy&#xA;in event little&#xA;in event non&#xA;in event weather&#xA;in event wipe&#xA;in event intvWipe&#xA;in event manWipe&#xA;in event work&#xA;&#xA;//features&#xA;var sL : boolean&#xA;var sH : boolean&#xA;var wL : boolean&#xA;var wH : boolean&#xA;var S : boolean&#xA;var W : boolean&#xA;var pW : boolean&#xA;&#xA;//output functions&#xA;operation ok():integer&#xA;operation on():integer&#xA;operation off():integer&#xA;operation heavyRain():integer&#xA;operation rain():integer&#xA;operation noRain():integer&#xA;operation perm():integer&#xA;operation intv():integer&#xA;operation slow():integer&#xA;operation fast():integer" name="ffsm">
+  <sgraph:Statechart xmi:id="_nDK_IL8nEeaAyIZK-0XS2g" specification="interface:&#xA;// inputs&#xA;in event heavy&#xA;in event little&#xA;in event non&#xA;in event weather&#xA;in event wipe&#xA;in event intvWipe&#xA;in event manWipe&#xA;&#xA;&#xA;//features&#xA;var sL : boolean&#xA;var sH : boolean&#xA;var wL : boolean&#xA;var wH : boolean&#xA;var S : boolean&#xA;var W : boolean&#xA;var pW : boolean&#xA;&#xA;//output functions&#xA;operation ok():integer&#xA;operation on():integer&#xA;operation off():integer&#xA;operation heavyRain():integer&#xA;operation rain():integer&#xA;operation noRain():integer&#xA;operation perm():integer&#xA;operation intv():integer&#xA;operation slow():integer&#xA;operation fast():integer" name="ffsm">
     <regions xmi:id="_3lchGDkCEeiVY4dSLvuE7w" name="main region">
       <vertices xsi:type="sgraph:Entry" xmi:id="_3ldIITkCEeiVY4dSLvuE7w">
         <outgoingTransitions xmi:id="_BQpbEDkDEeiVY4dSLvuE7w" specification="" target="_5ybWADkCEeiVY4dSLvuE7w"/>
@@ -35,26 +35,28 @@
           <vertices xsi:type="sgraph:Entry" xmi:id="_FZlmYDkDEeiVY4dSLvuE7w">
             <outgoingTransitions xmi:id="_JUri8DkDEeiVY4dSLvuE7w" specification="" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_G0QNkDkDEeiVY4dSLvuE7w" specification="work/on()" name="w2[pW]" incomingTransitions="_8ZB9IDkIEeiVY4dSLvuE7w _xvfWIDkJEeiVY4dSLvuE7w">
+          <vertices xsi:type="sgraph:State" xmi:id="_G0QNkDkDEeiVY4dSLvuE7w" specification="work/on()&#xA;heavy/ok()&#xA;little/ok()&#xA;non/ok()" name="w2[pW]" incomingTransitions="_8ZB9IDkIEeiVY4dSLvuE7w _xvfWIDkJEeiVY4dSLvuE7w">
             <outgoingTransitions xmi:id="_xvfWIDkJEeiVY4dSLvuE7w" specification="wipe/perm()" target="_G0QNkDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_G8ZOMDkJEeiVY4dSLvuE7w" specification="manWipe/off()" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_NnkQQDkKEeiVY4dSLvuE7w" specification="intvWipe[W]/on() " target="_HO130DkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_HO130DkDEeiVY4dSLvuE7w" specification="manWipe/off()" name="w3" incomingTransitions="_HgFUoDkKEeiVY4dSLvuE7w _NnkQQDkKEeiVY4dSLvuE7w _h_6TgDk4Eeie9eNLIuB2iQ _kGwj4Dk7Eeie9eNLIuB2iQ _wOkDMDk7Eeie9eNLIuB2iQ">
+          <vertices xsi:type="sgraph:State" xmi:id="_HO130DkDEeiVY4dSLvuE7w" specification="manWipe/off()&#xA;non/ok()" name="w3" incomingTransitions="_HgFUoDkKEeiVY4dSLvuE7w _NnkQQDkKEeiVY4dSLvuE7w _h_6TgDk4Eeie9eNLIuB2iQ _kGwj4Dk7Eeie9eNLIuB2iQ _wOkDMDk7Eeie9eNLIuB2iQ">
             <outgoingTransitions xmi:id="_h_6TgDk4Eeie9eNLIuB2iQ" specification="wipe/intv()" target="_HO130DkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_pxc2oDkLEeiVY4dSLvuE7w" specification="intvWipe/off()" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
-            <outgoingTransitions xmi:id="_YkNkADkKEeiVY4dSLvuE7w" specification="work[wL]/on()" target="_HfnewDkDEeiVY4dSLvuE7w"/>
-            <outgoingTransitions xmi:id="_bB2rIDkKEeiVY4dSLvuE7w" specification="work[wH]/on()" target="_HuPJkDkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_YkNkADkKEeiVY4dSLvuE7w" specification="heavy[wL]/ok()" target="_HfnewDkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_aRGp8DnWEeiwO-rhBNulkw" specification="little[wL]/ok()" target="_HfnewDkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_bB2rIDkKEeiVY4dSLvuE7w" specification="heavy[wH]/ok()" target="_HuPJkDkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_naIVsDnWEeiwO-rhBNulkw" specification="little[wH]/ok()" target="_HuPJkDkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_HfnewDkDEeiVY4dSLvuE7w" specification="manWipe/off()&#xA;intvWipe/on()" name="w4[wL]" incomingTransitions="_YkNkADkKEeiVY4dSLvuE7w _Ac-58Dk5Eeie9eNLIuB2iQ">
+          <vertices xsi:type="sgraph:State" xmi:id="_HfnewDkDEeiVY4dSLvuE7w" specification="manWipe/off()&#xA;intvWipe/on()&#xA;heavy/ok()&#xA;little/ok()" name="w4[wL]" incomingTransitions="_YkNkADkKEeiVY4dSLvuE7w _Ac-58Dk5Eeie9eNLIuB2iQ _aRGp8DnWEeiwO-rhBNulkw">
             <outgoingTransitions xmi:id="_Ac-58Dk5Eeie9eNLIuB2iQ" specification="wipe/slow()" target="_HfnewDkDEeiVY4dSLvuE7w"/>
-            <outgoingTransitions xmi:id="_kGwj4Dk7Eeie9eNLIuB2iQ" specification="work/off()" target="_HO130DkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_kGwj4Dk7Eeie9eNLIuB2iQ" specification="non/ok()" target="_HO130DkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_HuPJkDkDEeiVY4dSLvuE7w" specification="manWipe/off()&#xA;intvWipe/on()" name="w5[wH]" incomingTransitions="_bB2rIDkKEeiVY4dSLvuE7w _G-rsYDk5Eeie9eNLIuB2iQ">
+          <vertices xsi:type="sgraph:State" xmi:id="_HuPJkDkDEeiVY4dSLvuE7w" specification="manWipe/off()&#xA;intvWipe/on()&#xA;heavy/ok()&#xA;little/ok()" name="w5[wH]" incomingTransitions="_bB2rIDkKEeiVY4dSLvuE7w _G-rsYDk5Eeie9eNLIuB2iQ _naIVsDnWEeiwO-rhBNulkw">
             <outgoingTransitions xmi:id="_G-rsYDk5Eeie9eNLIuB2iQ" specification="wipe/fast()" target="_HuPJkDkDEeiVY4dSLvuE7w"/>
-            <outgoingTransitions xmi:id="_wOkDMDk7Eeie9eNLIuB2iQ" specification="work/off()" target="_HO130DkDEeiVY4dSLvuE7w"/>
+            <outgoingTransitions xmi:id="_wOkDMDk7Eeie9eNLIuB2iQ" specification="non/ok()" target="_HO130DkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_I2DGMDkDEeiVY4dSLvuE7w" specification="" name="w1" incomingTransitions="_JUri8DkDEeiVY4dSLvuE7w _G8ZOMDkJEeiVY4dSLvuE7w _pxc2oDkLEeiVY4dSLvuE7w _aAKOsDk4Eeie9eNLIuB2iQ">
+          <vertices xsi:type="sgraph:State" xmi:id="_I2DGMDkDEeiVY4dSLvuE7w" specification="heavy/ok()&#xA;little/ok()&#xA;non/ok()" name="w1" incomingTransitions="_JUri8DkDEeiVY4dSLvuE7w _G8ZOMDkJEeiVY4dSLvuE7w _pxc2oDkLEeiVY4dSLvuE7w _aAKOsDk4Eeie9eNLIuB2iQ">
             <outgoingTransitions xmi:id="_aAKOsDk4Eeie9eNLIuB2iQ" specification="wipe,work/off()" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_8ZB9IDkIEeiVY4dSLvuE7w" specification="manWipe/on()" target="_G0QNkDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_HgFUoDkKEeiVY4dSLvuE7w" specification="intvWipe[W]/on()" target="_HO130DkDEeiVY4dSLvuE7w"/>
@@ -590,8 +592,28 @@
       </children>
       <styles xsi:type="notation:ConnectorStyle" xmi:id="_wOkqQTk7Eeie9eNLIuB2iQ" smoothness="Normal" lineColor="4210752"/>
       <styles xsi:type="notation:FontStyle" xmi:id="_wOkqQzk7Eeie9eNLIuB2iQ" fontName="Verdana"/>
-      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_wOkqQjk7Eeie9eNLIuB2iQ" points="[-17, -7, 265, 52]$[-108, -41, 174, 18]$[-251, -56, 31, 3]"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_wOkqQjk7Eeie9eNLIuB2iQ" points="[-60, -26, 253, 34]$[-111, -48, 202, 12]$[-220, -55, 93, 5]"/>
       <targetAnchor xsi:type="notation:IdentityAnchor" xmi:id="_wOlRUDk7Eeie9eNLIuB2iQ" id="(0.125,0.37735849056603776)"/>
+    </edges>
+    <edges xmi:id="_aRHRADnWEeiwO-rhBNulkw" type="Transition" element="_aRGp8DnWEeiwO-rhBNulkw" source="_oRvG6zlMEei1eq8j-_7KLA" target="_oRvG9zlMEei1eq8j-_7KLA">
+      <children xsi:type="notation:DecorationNode" xmi:id="_aRHRBDnWEeiwO-rhBNulkw" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_aRHRBTnWEeiwO-rhBNulkw"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_aRHRBjnWEeiwO-rhBNulkw" y="10"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_aRHRATnWEeiwO-rhBNulkw" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_aRHRAznWEeiwO-rhBNulkw" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_aRHRAjnWEeiwO-rhBNulkw" points="[23, -9, -218, 106]$[299, -87, 58, 28]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_aRH4EDnWEeiwO-rhBNulkw" id="(0.7747747747747747,0.22580645161290322)"/>
+    </edges>
+    <edges xmi:id="_naI8wDnWEeiwO-rhBNulkw" type="Transition" element="_naIVsDnWEeiwO-rhBNulkw" source="_oRvG6zlMEei1eq8j-_7KLA" target="_oRvHAzlMEei1eq8j-_7KLA">
+      <children xsi:type="notation:DecorationNode" xmi:id="_naI8xDnWEeiwO-rhBNulkw" type="TransitionExpression">
+        <styles xsi:type="notation:ShapeStyle" xmi:id="_naI8xTnWEeiwO-rhBNulkw"/>
+        <layoutConstraint xsi:type="notation:Location" xmi:id="_naI8xjnWEeiwO-rhBNulkw" x="14" y="-2"/>
+      </children>
+      <styles xsi:type="notation:ConnectorStyle" xmi:id="_naI8wTnWEeiwO-rhBNulkw" lineColor="4210752"/>
+      <styles xsi:type="notation:FontStyle" xmi:id="_naI8wznWEeiwO-rhBNulkw" fontName="Verdana"/>
+      <bendpoints xsi:type="notation:RelativeBendpoints" xmi:id="_naI8wjnWEeiwO-rhBNulkw" points="[0, 0, -245, -24]$[205, 52, -40, 28]"/>
+      <sourceAnchor xsi:type="notation:IdentityAnchor" xmi:id="_naJj0DnWEeiwO-rhBNulkw" id="(0.9099099099099099,0.7903225806451613)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
