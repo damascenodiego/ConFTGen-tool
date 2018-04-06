@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and mandatory="true" name="Feature_R">
+				<alt mandatory="true" name="Feature_S">
+					<feature mandatory="true" name="Feature_sL"></feature>
+					<feature mandatory="true" name="Feature_sH"></feature>
+				</alt>
+				<alt mandatory="false" name="Feature_W">
+					<feature mandatory="true" name="Feature_wL"></feature>
+					<feature mandatory="true" name="Feature_wH"></feature>
+				</alt>
+			</and>
+		</struct>
+		<constraints>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
