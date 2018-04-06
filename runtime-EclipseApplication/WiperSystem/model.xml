@@ -7,7 +7,7 @@
 					<feature mandatory="true" name="Feature_sL"></feature>
 					<feature mandatory="true" name="Feature_sH"></feature>
 				</alt>
-				<alt mandatory="false" name="Feature_W">
+				<alt mandatory="true" name="Feature_W">
 					<feature mandatory="true" name="Feature_wL"></feature>
 					<feature mandatory="true" name="Feature_wH"></feature>
 				</alt>

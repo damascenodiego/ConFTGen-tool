@@ -40,7 +40,7 @@
             <outgoingTransitions xmi:id="_G8ZOMDkJEeiVY4dSLvuE7w" specification="manWipe/off()" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_NnkQQDkKEeiVY4dSLvuE7w" specification="intvWipe[W]/on() " target="_HO130DkDEeiVY4dSLvuE7w"/>
           </vertices>
-          <vertices xsi:type="sgraph:State" xmi:id="_HO130DkDEeiVY4dSLvuE7w" specification="manWipe/off()" name="w3[W]" incomingTransitions="_HgFUoDkKEeiVY4dSLvuE7w _NnkQQDkKEeiVY4dSLvuE7w _h_6TgDk4Eeie9eNLIuB2iQ _kGwj4Dk7Eeie9eNLIuB2iQ _wOkDMDk7Eeie9eNLIuB2iQ">
+          <vertices xsi:type="sgraph:State" xmi:id="_HO130DkDEeiVY4dSLvuE7w" specification="manWipe/off()" name="w3" incomingTransitions="_HgFUoDkKEeiVY4dSLvuE7w _NnkQQDkKEeiVY4dSLvuE7w _h_6TgDk4Eeie9eNLIuB2iQ _kGwj4Dk7Eeie9eNLIuB2iQ _wOkDMDk7Eeie9eNLIuB2iQ">
             <outgoingTransitions xmi:id="_h_6TgDk4Eeie9eNLIuB2iQ" specification="wipe/intv()" target="_HO130DkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_pxc2oDkLEeiVY4dSLvuE7w" specification="intvWipe/off()" target="_I2DGMDkDEeiVY4dSLvuE7w"/>
             <outgoingTransitions xmi:id="_YkNkADkKEeiVY4dSLvuE7w" specification="work[wL]/on()" target="_HfnewDkDEeiVY4dSLvuE7w"/>
